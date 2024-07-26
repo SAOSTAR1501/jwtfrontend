@@ -31,4 +31,25 @@ const deleteUser = (user) => {
 const fetchGroups = () => {
   return axios.get("http://localhost:8888/api/v1/group/read");
 };
-export { registerNewUser, loginUser, fetchAllUsers, deleteUser, fetchGroups };
+
+const createNewUser = (userData) => {
+  return axios.post("http://localhost:8888/api/v1/user/create", {
+    ...userData,
+  });
+};
+
+const updateCurrentUser = (userData) => {
+  // console.log(userData);
+  return axios.put("http://localhost:8888/api/v1/user/update", {
+    ...userData,
+  });
+};
+export {
+  registerNewUser,
+  loginUser,
+  fetchAllUsers,
+  deleteUser,
+  fetchGroups,
+  createNewUser,
+  updateCurrentUser,
+};

@@ -1,0 +1,18 @@
+.manage-users-container {
+    i {
+        padding-right: 6px;
+    }
+
+    .user-body {
+        .edit {
+            color: orange;
+            cursor: pointer;
+            padding-right: 10px;
+        }
+
+        .delete {
+            color: red;
+            cursor: pointer;
+        }
+    }
+}
