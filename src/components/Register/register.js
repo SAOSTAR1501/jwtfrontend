@@ -26,9 +26,7 @@ const Register = (props) => {
   const handleRegister = async () => {
     let check = isValidInput();
     if (check === true) {
-      let response = await registerNewUser(email, phone, username, password);
-
-      let serverData = response;
+      let serverData = await registerNewUser(email, phone, username, password);
 
       if (+serverData.EC === 0) {
         toast.success(serverData.EM);

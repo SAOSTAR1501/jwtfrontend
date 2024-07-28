@@ -4,6 +4,8 @@ import axios from "axios";
 const instance = axios.create({
   baseURL: "http://localhost:8888",
 });
+
+instance.defaults.withCredentials = true;
 // Add a request interceptor
 instance.interceptors.request.use(
   function (config) {

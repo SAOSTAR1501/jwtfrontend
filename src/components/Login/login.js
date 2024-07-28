@@ -42,7 +42,7 @@ const Login = (props) => {
       sessionStorage.setItem("account", JSON.stringify(data));
       toast.success("Login successfully!");
       navigate("/users");
-      window.location.reload();
+      // window.location.reload();
 
       //redux
     }
